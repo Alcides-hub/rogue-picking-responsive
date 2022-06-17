@@ -132,8 +132,8 @@ header nav ul li a{
 }
 
 .section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
+	/*border-left: 1px solid #eee;
+	border-right: 1px solid #eee;*/
 }
 
 .section-two h3,
@@ -178,17 +178,49 @@ footer span {
 	font-size: 0.875em;
 }
 
-@media (min-width: 768px) {
+@media all and (min-width: 768px) {
+	/* Tablet styles here */
+
+.bottom-section {
+	justify-content: center;
+	align-items: left;
+	border-top: 1px solid #eee;
+}
+
 .section-one,
 .section-two,
 .section-three {
-	width: 33%;
-	display: flex;
+	flex-basis: 33%;
 	justify-content: center;
-	align-items: center;
-	border-top: 1px solid #eee;
+	align-items: left;
+	text-align: left;
 	}
+
+.section-two {
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
 }
-@media (min-width: 1200px) {
+ 
+@media all and (min-width:1200px) {
+    /* Desktop styles here */
+	header	{
+		flex-direction: row;
+	}
+	header h1 {
+		justify-content: flex-start;
+		width: 60%;
+    	padding: 10px 50px;
+    	border-bottom: none;
+    	text-align: left;
+	}
+
+	header nav {
+		width: 40%;
+	}
+	header nav ul {
+		display: inline-flex;
+		justify-content: flex-end;
+	}
+
 
 }
